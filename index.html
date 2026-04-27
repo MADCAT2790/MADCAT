@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>간단한 버튼 페이지</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f5f7fb;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      width: min(90vw, 420px);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+
+    #message {
+      font-size: 1rem;
+      color: #333;
+      margin: 16px 0 20px;
+    }
+
+    button {
+      border: 0;
+      background: #2563eb;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>버튼 텍스트 변경 예제</h1>
+    <p id="message">버튼을 눌러보세요!</p>
+    <button id="changeBtn" type="button">텍스트 바꾸기</button>
+  </main>
+
+  <script>
+    const message = document.getElementById('message');
+    const changeBtn = document.getElementById('changeBtn');
+
+    changeBtn.addEventListener('click', () => {
+      message.textContent = '텍스트가 바뀌었습니다 🎉';
+    });
+  </script>
+</body>
+</html>
